@@ -6,10 +6,10 @@ APIs:
 
 ## /contacts
 
-| Method | Description 	        |
-|---	   |---	                  |
-|  GET 	 |   Find all contacts	|
-|  POST	 | Create a new contact |
+| Method 	| Description          	|
+|--------	|----------------------	|
+| GET    	| Find all contacts    	|
+| POST   	| Create a new contact 	|
 
 
 
