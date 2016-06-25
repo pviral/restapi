@@ -37,7 +37,7 @@ function handleError(res, reason, message, code) {
   res.status(code || 500).json({"error": message});
 }
 
-app.get("/", function(req, res) {
+app.get("/contacts", function(req, res) {
 	db.collection(CONTACTS_COLLECTION).find({}).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get contacts.");
@@ -64,6 +64,11 @@ app.post("/contacts", function(req, res) {
   });
 });
 
+/*  "/contacts/:id"
+ *    GET: find contact by id
+ *    PUT: update contact by id
+ *    DELETE: deletes contact by id
+ */
 app.get("/contacts/:id", function(req, res) {
   db.collection(CONTACTS_COLLECTION).findOne({ _id: new objectId(req.params.id) }, function(err, doc){
     if (err) {

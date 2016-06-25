@@ -4,10 +4,13 @@ Heroku - http://nodejsapitesting.herokuapp.com/
 
 APIs:
 
-## GET /
+## /contacts
 
-## POST /contacts
+| Method | Description 	        |
+|---	 |---	                |
+|  GET 	 |   Find all contacts	|
+|  POST	 | Create a new contact |
 
-## DELETE /contacts/:id
 
-## PUT /contacts/:id
+
+## /contacts/:id
